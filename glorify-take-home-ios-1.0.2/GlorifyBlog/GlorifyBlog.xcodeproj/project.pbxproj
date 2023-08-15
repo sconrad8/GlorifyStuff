@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */; };
+		DCF2162F29D24D9E00F71AAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */; };
+		DCF2163429D24D9E00F71AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF2163229D24D9E00F71AAA /* Main.storyboard */; };
+		DCF2163629D24DA000F71AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF2163529D24DA000F71AAA /* Assets.xcassets */; };
+		DCF2163929D24DA000F71AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF2163729D24DA000F71AAA /* LaunchScreen.storyboard */; };
+		DCF2164429D24DA000F71AAA /* GlorifyBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2164329D24DA000F71AAA /* GlorifyBlogTests.swift */; };
+		DCF2165F29D2520700F71AAA /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2165E29D2520700F71AAA /* RootTabBarController.swift */; };
+		DCF2166129D2571F00F71AAA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166029D2571F00F71AAA /* LoginViewController.swift */; };
+		DCF2166329D2574E00F71AAA /* BlogPostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */; };
+		DCF2166529D2577900F71AAA /* BlogPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */; };
+		DCF2166729D257ED00F71AAA /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */; };
+		DCF2166929D2581700F71AAA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166829D2581700F71AAA /* UserManager.swift */; };
+		DCF2166B29D2582B00F71AAA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166A29D2582B00F71AAA /* Post.swift */; };
+		DCF2166D29D2584800F71AAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166C29D2584800F71AAA /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCF2164029D24DA000F71AAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF2162129D24D9E00F71AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF2162829D24D9E00F71AAA;
+			remoteInfo = GlorifyBlog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCF2162929D24D9E00F71AAA /* GlorifyBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlorifyBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DCF2163329D24D9E00F71AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCF2163529D24DA000F71AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCF2163829D24DA000F71AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCF2163A29D24DA000F71AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF2163F29D24DA000F71AAA /* GlorifyBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlorifyBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF2164329D24DA000F71AAA /* GlorifyBlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlorifyBlogTests.swift; sourceTree = "<group>"; };
+		DCF2165E29D2520700F71AAA /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		DCF2166029D2571F00F71AAA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostListViewController.swift; sourceTree = "<group>"; };
+		DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostDetailViewController.swift; sourceTree = "<group>"; };
+		DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DCF2166829D2581700F71AAA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		DCF2166A29D2582B00F71AAA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DCF2166C29D2584800F71AAA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCF2162629D24D9E00F71AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF2163C29D24DA000F71AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCF2162029D24D9E00F71AAA = {
+			isa = PBXGroup;
+			children = (
+				DCF2162B29D24D9E00F71AAA /* GlorifyBlog */,
+				DCF2162A29D24D9E00F71AAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCF2162A29D24D9E00F71AAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2162929D24D9E00F71AAA /* GlorifyBlog.app */,
+				DCF2163F29D24DA000F71AAA /* GlorifyBlogTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCF2162B29D24D9E00F71AAA /* GlorifyBlog */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */,
+				DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */,
+				DCF2165E29D2520700F71AAA /* RootTabBarController.swift */,
+				DCF2166029D2571F00F71AAA /* LoginViewController.swift */,
+				DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */,
+				DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */,
+				DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */,
+				DCF2166829D2581700F71AAA /* UserManager.swift */,
+				DCF2166A29D2582B00F71AAA /* Post.swift */,
+				DCF2166C29D2584800F71AAA /* User.swift */,
+				DCF2163229D24D9E00F71AAA /* Main.storyboard */,
+				DCF2163529D24DA000F71AAA /* Assets.xcassets */,
+				DCF2163729D24DA000F71AAA /* LaunchScreen.storyboard */,
+				DCF2163A29D24DA000F71AAA /* Info.plist */,
+				DCF2164229D24DA000F71AAA /* GlorifyBlogTests */,
+			);
+			path = GlorifyBlog;
+			sourceTree = "<group>";
+		};
+		DCF2164229D24DA000F71AAA /* GlorifyBlogTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2164329D24DA000F71AAA /* GlorifyBlogTests.swift */,
+			);
+			path = GlorifyBlogTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCF2162829D24D9E00F71AAA /* GlorifyBlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF2165329D24DA000F71AAA /* Build configuration list for PBXNativeTarget "GlorifyBlog" */;
+			buildPhases = (
+				DCF2162529D24D9E00F71AAA /* Sources */,
+				DCF2162629D24D9E00F71AAA /* Frameworks */,
+				DCF2162729D24D9E00F71AAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlorifyBlog;
+			productName = GlorifyBlog;
+			productReference = DCF2162929D24D9E00F71AAA /* GlorifyBlog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCF2163E29D24DA000F71AAA /* GlorifyBlogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF2165629D24DA000F71AAA /* Build configuration list for PBXNativeTarget "GlorifyBlogTests" */;
+			buildPhases = (
+				DCF2163B29D24DA000F71AAA /* Sources */,
+				DCF2163C29D24DA000F71AAA /* Frameworks */,
+				DCF2163D29D24DA000F71AAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF2164129D24DA000F71AAA /* PBXTargetDependency */,
+			);
+			name = GlorifyBlogTests;
+			productName = GlorifyBlogTests;
+			productReference = DCF2163F29D24DA000F71AAA /* GlorifyBlogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCF2162129D24D9E00F71AAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DCF2162829D24D9E00F71AAA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DCF2163E29D24DA000F71AAA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DCF2162829D24D9E00F71AAA;
+					};
+				};
+			};
+			buildConfigurationList = DCF2162429D24D9E00F71AAA /* Build configuration list for PBXProject "GlorifyBlog" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCF2162029D24D9E00F71AAA;
+			productRefGroup = DCF2162A29D24D9E00F71AAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCF2162829D24D9E00F71AAA /* GlorifyBlog */,
+				DCF2163E29D24DA000F71AAA /* GlorifyBlogTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCF2162729D24D9E00F71AAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF2163929D24DA000F71AAA /* LaunchScreen.storyboard in Resources */,
+				DCF2163629D24DA000F71AAA /* Assets.xcassets in Resources */,
+				DCF2163429D24D9E00F71AAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF2163D29D24DA000F71AAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCF2162529D24D9E00F71AAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF2166529D2577900F71AAA /* BlogPostDetailViewController.swift in Sources */,
+				DCF2166729D257ED00F71AAA /* FavoritesViewController.swift in Sources */,
+				DCF2165F29D2520700F71AAA /* RootTabBarController.swift in Sources */,
+				DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */,
+				DCF2166129D2571F00F71AAA /* LoginViewController.swift in Sources */,
+				DCF2166329D2574E00F71AAA /* BlogPostListViewController.swift in Sources */,
+				DCF2166B29D2582B00F71AAA /* Post.swift in Sources */,
+				DCF2166929D2581700F71AAA /* UserManager.swift in Sources */,
+				DCF2166D29D2584800F71AAA /* User.swift in Sources */,
+				DCF2162F29D24D9E00F71AAA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF2163B29D24DA000F71AAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF2164429D24DA000F71AAA /* GlorifyBlogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCF2164129D24DA000F71AAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF2162829D24D9E00F71AAA /* GlorifyBlog */;
+			targetProxy = DCF2164029D24DA000F71AAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCF2163229D24D9E00F71AAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF2163329D24D9E00F71AAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCF2163729D24DA000F71AAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF2163829D24DA000F71AAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCF2165129D24DA000F71AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DCF2165229D24DA000F71AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCF2165429D24DA000F71AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlorifyBlog/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glorify.GlorifyBlog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCF2165529D24DA000F71AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlorifyBlog/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glorify.GlorifyBlog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DCF2165729D24DA000F71AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glorify.GlorifyBlogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlorifyBlog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GlorifyBlog";
+			};
+			name = Debug;
+		};
+		DCF2165829D24DA000F71AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.glorify.GlorifyBlogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlorifyBlog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GlorifyBlog";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCF2162429D24D9E00F71AAA /* Build configuration list for PBXProject "GlorifyBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF2165129D24DA000F71AAA /* Debug */,
+				DCF2165229D24DA000F71AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF2165329D24DA000F71AAA /* Build configuration list for PBXNativeTarget "GlorifyBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF2165429D24DA000F71AAA /* Debug */,
+				DCF2165529D24DA000F71AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF2165629D24DA000F71AAA /* Build configuration list for PBXNativeTarget "GlorifyBlogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF2165729D24DA000F71AAA /* Debug */,
+				DCF2165829D24DA000F71AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCF2162129D24D9E00F71AAA /* Project object */;
+}
