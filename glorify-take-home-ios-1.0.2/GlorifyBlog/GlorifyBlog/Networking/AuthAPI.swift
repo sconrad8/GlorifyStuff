@@ -14,7 +14,6 @@ protocol AuthAPIProvider {
     
     func logIn(username: String, password: String, completion: @escaping (Error?) -> Void)
     func logOut()
-    func validateCredentials(username: String, password: String) -> Bool
 }
 
 class AuthAPI: AuthAPIProvider {
@@ -42,11 +41,12 @@ class AuthAPI: AuthAPIProvider {
         }
     }
     
+    private func validateCredentials(username: String, password: String) -> Bool {
+        username == "user" && password == "pass"
+    }
+    
     func logOut() {
         currentUser = nil
     }
     
-    func validateCredentials(username: String, password: String) -> Bool {
-        username == "user" && password == "pass"
-    }
 }
