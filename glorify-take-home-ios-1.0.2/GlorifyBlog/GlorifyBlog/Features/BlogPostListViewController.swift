@@ -11,6 +11,8 @@ import UIKit
 
 class BlogPostListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, LogInViewControllerDelegate {
     
+    private let authAPI: AuthAPIProvider = AuthAPI.shared
+    private let postAPI: PostAPIProvider = PostAPI.shared
     var posts: [Post] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,13 +25,13 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
         
         NotificationCenter.default.addObserver(self, selector: #selector(favoritedPostsDidChange), name: Notification.Name(rawValue: "GlorifyBlogFavoritesChanged"), object: nil)
         
-        if UserManager.shared.currentUser == nil {
+        if authAPI.currentUser == nil {
             navigateToLogIn()
         }
     }
     
     func logInViewControllerDidLogIn() {
-        navigationItem.title = "Welcome, \(UserManager.shared.currentUser!.username)!"
+        navigationItem.title = "Welcome, \(authAPI.currentUser!.username)!"
         showLoadingIndicator(true)
         
         URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts")!, completionHandler: { [weak self] data, response, error in
@@ -60,11 +62,8 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @objc func logOut() {
-        UserManager.shared.currentUser = nil
-        UserManager.shared.usersFavoritePosts = []
-        tabBarController?.tabBar.items?[1].badgeValue = nil
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "GlorifyBlogFavoritesChanged"),
-                                        object: nil)
+        authAPI.logOut()
+        postAPI.clearFavorites()
         navigateToLogIn()
     }
     
@@ -73,10 +72,6 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
         loginViewController.modalPresentationStyle = .overFullScreen
         loginViewController.delegate = self
         navigationController?.present(loginViewController, animated: true, completion: nil)
-    }
-    
-    func isPostFavorited(_ post: Post) -> Bool {
-        UserManager.shared.usersFavoritePosts.map { $0.id }.contains(post.id)
     }
     
     func showLoadingIndicator(_ shouldShow: Bool) {
@@ -110,7 +105,7 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
         let cell = UITableViewCell()
         let post = posts[indexPath.row]
         cell.textLabel?.text = post.title
-        cell.backgroundColor = isPostFavorited(post) ? UIColor(red: 239/255, green: 189/255, blue: 102/255, alpha: 1) : .white
+        cell.backgroundColor = postAPI.isPostFavorited(postId: post.id) ? UIColor(red: 239/255, green: 189/255, blue: 102/255, alpha: 1) : .white
         return cell
     }
     

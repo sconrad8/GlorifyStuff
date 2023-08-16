@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E890E032A8C2786000F59CB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E890E022A8C2786000F59CB /* Bindable.swift */; };
+		7E890E052A8C65D8000F59CB /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E890E042A8C65D8000F59CB /* AuthAPI.swift */; };
 		DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */; };
 		DCF2162F29D24D9E00F71AAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */; };
 		DCF2163429D24D9E00F71AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF2163229D24D9E00F71AAA /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		DCF2166329D2574E00F71AAA /* BlogPostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */; };
 		DCF2166529D2577900F71AAA /* BlogPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */; };
 		DCF2166729D257ED00F71AAA /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */; };
-		DCF2166929D2581700F71AAA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166829D2581700F71AAA /* UserManager.swift */; };
+		DCF2166929D2581700F71AAA /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166829D2581700F71AAA /* PostAPI.swift */; };
 		DCF2166B29D2582B00F71AAA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166A29D2582B00F71AAA /* Post.swift */; };
 		DCF2166D29D2584800F71AAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2166C29D2584800F71AAA /* User.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		7E890E022A8C2786000F59CB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		7E890E042A8C65D8000F59CB /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		DCF2162929D24D9E00F71AAA /* GlorifyBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlorifyBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostListViewController.swift; sourceTree = "<group>"; };
 		DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostDetailViewController.swift; sourceTree = "<group>"; };
 		DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		DCF2166829D2581700F71AAA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		DCF2166829D2581700F71AAA /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		DCF2166A29D2582B00F71AAA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DCF2166C29D2584800F71AAA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +106,8 @@
 		7E890E012A8C26E5000F59CB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DCF2166829D2581700F71AAA /* UserManager.swift */,
+				DCF2166829D2581700F71AAA /* PostAPI.swift */,
+				7E890E042A8C65D8000F59CB /* AuthAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -258,11 +261,12 @@
 				DCF2166729D257ED00F71AAA /* FavoritesViewController.swift in Sources */,
 				DCF2165F29D2520700F71AAA /* RootTabBarController.swift in Sources */,
 				DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */,
+				7E890E052A8C65D8000F59CB /* AuthAPI.swift in Sources */,
 				7E890E032A8C2786000F59CB /* Bindable.swift in Sources */,
 				DCF2166129D2571F00F71AAA /* LoginViewController.swift in Sources */,
 				DCF2166329D2574E00F71AAA /* BlogPostListViewController.swift in Sources */,
 				DCF2166B29D2582B00F71AAA /* Post.swift in Sources */,
-				DCF2166929D2581700F71AAA /* UserManager.swift in Sources */,
+				DCF2166929D2581700F71AAA /* PostAPI.swift in Sources */,
 				DCF2166D29D2584800F71AAA /* User.swift in Sources */,
 				DCF2162F29D24D9E00F71AAA /* SceneDelegate.swift in Sources */,
 			);

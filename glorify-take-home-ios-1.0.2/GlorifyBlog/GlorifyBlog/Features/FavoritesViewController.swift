@@ -11,8 +11,10 @@ import UIKit
 
 class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private let postAPI: PostAPIProvider = PostAPI.shared
+    
     var posts: [Post] {
-        UserManager.shared.usersFavoritePosts
+        postAPI.favoritePosts
     }
     
     @IBOutlet weak var tableView: UITableView!

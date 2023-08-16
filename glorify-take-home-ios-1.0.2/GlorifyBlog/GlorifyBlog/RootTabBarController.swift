@@ -11,6 +11,8 @@ import UIKit
 
 class RootTabBarController: UITabBarController {
     
+    private let postAPI: PostAPIProvider = PostAPI.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +25,7 @@ class RootTabBarController: UITabBarController {
     
     @objc
     private func favoritedPostsDidChange() {
-        let numFavoritedPosts = UserManager.shared.usersFavoritePosts.count
+        let numFavoritedPosts = postAPI.favoritePosts.count
         tabBar.items?[1].badgeValue = numFavoritedPosts == 0 ? nil : String(numFavoritedPosts)
     }
     

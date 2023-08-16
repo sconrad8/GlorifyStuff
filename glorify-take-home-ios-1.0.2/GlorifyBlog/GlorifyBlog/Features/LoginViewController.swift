@@ -16,6 +16,7 @@ protocol LogInViewControllerDelegate: AnyObject {
 class LogInViewController: UIViewController {
     
     weak var delegate: LogInViewControllerDelegate?
+    private let authAPI: AuthAPIProvider = AuthAPI.shared
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -36,7 +37,7 @@ class LogInViewController: UIViewController {
             return
         }
         
-        UserManager.shared.logIn(username: username, password: password) { [weak self] error in
+        authAPI.logIn(username: username, password: password) { [weak self] error in
             if error != nil {
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Error", message: "\(error!.localizedDescription)", preferredStyle: .alert)

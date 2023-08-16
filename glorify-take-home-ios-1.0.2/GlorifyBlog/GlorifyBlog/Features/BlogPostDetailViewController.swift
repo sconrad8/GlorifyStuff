@@ -69,11 +69,13 @@ extension BlogPostDetailViewController {
         var title: Bindable<String>
         var isFavorited: Bindable<Bool>
         
-        // TODO: Create UserManager Protocol and pass in as dependency
-        init(post: Post) {
+        private let postAPI: PostAPIProvider
+        
+        init(post: Post, postAPI: PostAPIProvider = PostAPI.shared) {
             self.post = .init(post)
             self.title = .init("Post \(post.id)")
-            self.isFavorited = .init(UserManager.shared.isPostFavorited(postId: post.id))
+            self.isFavorited = .init(postAPI.isPostFavorited(postId: post.id))
+            self.postAPI = postAPI
             
             observeData()
         }
@@ -121,16 +123,16 @@ extension BlogPostDetailViewController {
         }
         
         private func addToFavorites() {
-            UserManager.shared.userDidFavoritePost(post.value)
+            postAPI.favorite(post: post.value)
         }
         
         private func removeFromFavorites() {
-            UserManager.shared.userDidUnfavoritePost(post.value)
+            postAPI.unfavorite(post: post.value)
         }
         
         @objc
         private func favoritedPostsDidChange() {
-            isFavorited.value = UserManager.shared.isPostFavorited(postId: post.value.id)
+            isFavorited.value = postAPI.isPostFavorited(postId: post.value.id)
         }
     }
 }
