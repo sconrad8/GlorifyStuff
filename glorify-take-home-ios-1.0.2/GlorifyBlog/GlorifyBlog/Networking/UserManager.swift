@@ -38,6 +38,10 @@ class UserManager {
         username == "user" && password == "pass"
     }
     
+    func isPostFavorited(postId: Int) -> Bool {
+        usersFavoritePosts.contains { $0.id == postId }
+    }
+    
     func userDidFavoritePost(_ post: Post) {
         usersFavoritePosts.append(post)
         NotificationCenter.default.post(name: Notification.Name(rawValue: "GlorifyBlogFavoritesChanged"),

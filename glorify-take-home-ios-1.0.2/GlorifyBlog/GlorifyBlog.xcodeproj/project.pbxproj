@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E890E032A8C2786000F59CB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E890E022A8C2786000F59CB /* Bindable.swift */; };
 		DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */; };
 		DCF2162F29D24D9E00F71AAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */; };
 		DCF2163429D24D9E00F71AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF2163229D24D9E00F71AAA /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E890E022A8C2786000F59CB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		DCF2162929D24D9E00F71AAA /* GlorifyBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlorifyBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E890DFE2A8C2672000F59CB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E890E022A8C2786000F59CB /* Bindable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E890DFF2A8C2680000F59CB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */,
+				DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */,
+				DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */,
+				DCF2166029D2571F00F71AAA /* LoginViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7E890E002A8C26C5000F59CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2166A29D2582B00F71AAA /* Post.swift */,
+				DCF2166C29D2584800F71AAA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E890E012A8C26E5000F59CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2166829D2581700F71AAA /* UserManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		DCF2162029D24D9E00F71AAA = {
 			isa = PBXGroup;
 			children = (
@@ -91,16 +129,13 @@
 		DCF2162B29D24D9E00F71AAA /* GlorifyBlog */ = {
 			isa = PBXGroup;
 			children = (
+				7E890DFF2A8C2680000F59CB /* Features */,
+				7E890DFE2A8C2672000F59CB /* Helpers */,
+				7E890E002A8C26C5000F59CB /* Models */,
+				7E890E012A8C26E5000F59CB /* Networking */,
 				DCF2162C29D24D9E00F71AAA /* AppDelegate.swift */,
 				DCF2162E29D24D9E00F71AAA /* SceneDelegate.swift */,
 				DCF2165E29D2520700F71AAA /* RootTabBarController.swift */,
-				DCF2166029D2571F00F71AAA /* LoginViewController.swift */,
-				DCF2166229D2574E00F71AAA /* BlogPostListViewController.swift */,
-				DCF2166429D2577900F71AAA /* BlogPostDetailViewController.swift */,
-				DCF2166629D257ED00F71AAA /* FavoritesViewController.swift */,
-				DCF2166829D2581700F71AAA /* UserManager.swift */,
-				DCF2166A29D2582B00F71AAA /* Post.swift */,
-				DCF2166C29D2584800F71AAA /* User.swift */,
 				DCF2163229D24D9E00F71AAA /* Main.storyboard */,
 				DCF2163529D24DA000F71AAA /* Assets.xcassets */,
 				DCF2163729D24DA000F71AAA /* LaunchScreen.storyboard */,
@@ -223,6 +258,7 @@
 				DCF2166729D257ED00F71AAA /* FavoritesViewController.swift in Sources */,
 				DCF2165F29D2520700F71AAA /* RootTabBarController.swift in Sources */,
 				DCF2162D29D24D9E00F71AAA /* AppDelegate.swift in Sources */,
+				7E890E032A8C2786000F59CB /* Bindable.swift in Sources */,
 				DCF2166129D2571F00F71AAA /* LoginViewController.swift in Sources */,
 				DCF2166329D2574E00F71AAA /* BlogPostListViewController.swift in Sources */,
 				DCF2166B29D2582B00F71AAA /* Post.swift in Sources */,

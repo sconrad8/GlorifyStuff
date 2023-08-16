@@ -48,8 +48,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlogPostDetailViewController") as! BlogPostDetailViewController
         let post = posts[indexPath.row]
-        postDetailViewController.post = post
-        postDetailViewController.showsFaveButton = false
+        postDetailViewController.viewModel = .init(post: post)
         navigationController?.pushViewController(postDetailViewController, animated: true)
     }
     
