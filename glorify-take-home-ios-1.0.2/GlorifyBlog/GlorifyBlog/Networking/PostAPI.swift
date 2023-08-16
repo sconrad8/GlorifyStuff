@@ -12,6 +12,8 @@ import Foundation
 protocol PostAPIProvider {
     var favoritePosts: [Post] { get }
     
+    func fetchPost(_ postId: Int, completion: @escaping (Result<Post, Error>) -> Void)
+    
     func isPostFavorited(postId: Int) -> Bool
     func favorite(post: Post)
     func unfavorite(post: Post)
@@ -31,6 +33,34 @@ class PostAPI: PostAPIProvider {
         }
     }
     
+    // MARK: -
+    
+    func fetchPost(_ postId: Int, completion: @escaping (Result<Post, Error>) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts/\(postId)")!, completionHandler: { data, response, error in
+            if let error {
+                print(error)
+                completion(.failure(error))
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
+                
+                guard let post = Post(json: json ?? [:]) else {
+                    completion(.failure(PostAPIError.deserializationFailed))
+                    return
+                }
+                
+                completion(.success(post))
+            } catch {
+                print("Error: \(error.localizedDescription)")
+                completion(.failure(error))
+            }
+        }).resume()
+    }
+    
+    // MARK: - Favorites
+    
     func isPostFavorited(postId: Int) -> Bool {
         favoritePosts.contains { $0.id == postId }
     }
@@ -47,4 +77,8 @@ class PostAPI: PostAPIProvider {
         favoritePosts.removeAll()
     }
     
+}
+
+enum PostAPIError: Error {
+    case deserializationFailed
 }

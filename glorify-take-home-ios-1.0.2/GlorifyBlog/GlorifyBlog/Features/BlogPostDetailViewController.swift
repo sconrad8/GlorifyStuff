@@ -81,32 +81,18 @@ extension BlogPostDetailViewController {
         }
         
         func fetchData() {
-            // TODO: Break out networking request into Networking layer
-            URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts/\(post.value.id)")!, completionHandler: { [weak self] data, response, error in
+            postAPI.fetchPost(post.value.id) { [weak self] result in
                 guard let self else { return }
                 
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
-                    
-                    guard let post = Post(json: json ?? [:]) else {
-                        // TODO: Throw error
-                        return
-                    }
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .success(post):
                         self.post.value = post
-                    }
-                } catch {
-                    print("Error: \(error.localizedDescription)")
-                    DispatchQueue.main.async {
+                    case .failure:
                         self.title.value = "Error :("
                     }
                 }
-            }).resume()
+            }
         }
         
         private func observeData() {
