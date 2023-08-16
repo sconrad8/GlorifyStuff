@@ -44,47 +44,6 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
         </scene>
-        <!--Blog Post Detail View Controller-->
-        <scene sceneID="NCA-KG-hlQ">
-            <objects>
-                <viewController storyboardIdentifier="BlogPostDetailViewController" id="bkB-yq-4Is" customClass="BlogPostDetailViewController" customModule="GlorifyBlog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KFh-bJ-8PX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dch-Lr-zJa" userLabel="Title Label">
-                                <rect key="frame" x="16" y="64" width="382" height="37.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq9-N6-0f1" userLabel="Body Label">
-                                <rect key="frame" x="16" y="126.5" width="382" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Aar-D6-9vr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Dch-Lr-zJa" firstAttribute="leading" secondItem="Aar-D6-9vr" secondAttribute="leading" constant="16" id="Izj-fy-mPc"/>
-                            <constraint firstItem="Zq9-N6-0f1" firstAttribute="leading" secondItem="Dch-Lr-zJa" secondAttribute="leading" id="QLh-IO-rVE"/>
-                            <constraint firstItem="Zq9-N6-0f1" firstAttribute="trailing" secondItem="Dch-Lr-zJa" secondAttribute="trailing" id="SVZ-Cv-0Qm"/>
-                            <constraint firstItem="Zq9-N6-0f1" firstAttribute="top" secondItem="Dch-Lr-zJa" secondAttribute="bottom" constant="25" id="ZVf-Nw-7YJ"/>
-                            <constraint firstItem="Dch-Lr-zJa" firstAttribute="top" secondItem="Aar-D6-9vr" secondAttribute="top" constant="16" id="bs8-XS-N6G"/>
-                            <constraint firstItem="Aar-D6-9vr" firstAttribute="trailing" secondItem="Dch-Lr-zJa" secondAttribute="trailing" constant="16" id="txt-EQ-pI9"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="bodyLabel" destination="Zq9-N6-0f1" id="jir-vZ-sgw"/>
-                        <outlet property="titleLabel" destination="Dch-Lr-zJa" id="DtS-KJ-cLO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3DY-Ej-RAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="138"/>
-        </scene>
         <!--Root Tab Bar Controller-->
         <scene sceneID="jsi-td-j76">
             <objects>

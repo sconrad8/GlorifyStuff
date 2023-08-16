@@ -110,10 +110,11 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let postDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlogPostDetailViewController") as! BlogPostDetailViewController
         let post = posts[indexPath.row]
-        postDetailViewController.viewModel = .init(post: post)
+        let postDetailViewController = BlogPostDetailViewController(viewModel: .init(post: post))
         navigationController?.pushViewController(postDetailViewController, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
