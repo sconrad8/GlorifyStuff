@@ -22,4 +22,9 @@ The last thing I'll mention is that I also moved the tab bar item badge state ha
 
 ### Additional thoughts
 
-// YOUR RESPONSE HERE
+Implementing Alamofire along with the Networking layer would have also been an interesting practice to implement, but I saw way too many things that needed to be improved in the ViewControllers and architecture, so had to focus on that. Maybe I touched a bit more code than necessary outside of the BlogPostDetailViewController lol. I would have built an API service that conforms to a protocol that defines the possible inputs of an API request and returns some object that conforms to Codable. Alamofire would have then been built behind this layer and the source that makes the network requests and handles returning a Codable response. The PostAPI and AuthAPI would inject this API Service Protocol and make their api requests through this. Of course there is a lot more to this.
+
+Implementing a library sounds like it would have been too easy, so didn't really look into that much. 
+
+
+Thanks for spending the time to read all this and consider me for this role :)
