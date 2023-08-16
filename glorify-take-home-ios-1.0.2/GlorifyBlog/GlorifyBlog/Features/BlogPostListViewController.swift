@@ -34,27 +34,21 @@ class BlogPostListViewController: UIViewController, UITableViewDataSource, UITab
         navigationItem.title = "Welcome, \(authAPI.currentUser!.username)!"
         showLoadingIndicator(true)
         
-        URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts")!, completionHandler: { [weak self] data, response, error in
-            if error != nil {
-                print(error!)
-                return
-            }
+        postAPI.fetchPosts { [weak self] result in
+            guard let self else { return }
             
-            do {
-                let jsonArray = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String : Any]]
-                let posts = (jsonArray ?? []).compactMap({ json -> Post? in
-                    return Post(json: json)
-                })
-                self?.posts = posts
-                
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                    self?.showLoadingIndicator(false)
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(posts):
+                    self.posts = posts
+                    self.tableView.reloadData()
+                    self.showLoadingIndicator(false)
+                case .failure:
+                    // TODO: Handle Error
+                    break
                 }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
             }
-        }).resume()
+        }
     }
     
     @objc func favoritedPostsDidChange() {

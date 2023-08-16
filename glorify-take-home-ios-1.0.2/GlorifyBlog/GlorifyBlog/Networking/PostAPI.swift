@@ -12,6 +12,7 @@ import Foundation
 protocol PostAPIProvider {
     var favoritePosts: [Post] { get }
     
+    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void)
     func fetchPost(_ postId: Int, completion: @escaping (Result<Post, Error>) -> Void)
     
     func isPostFavorited(postId: Int) -> Bool
@@ -34,6 +35,28 @@ class PostAPI: PostAPIProvider {
     }
     
     // MARK: -
+    
+    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts")!, completionHandler: { data, response, error in
+            if let error {
+                print(error)
+                completion(.failure(error))
+                return
+            }
+            
+            do {
+                let jsonArray = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String : Any]]
+                let posts = (jsonArray ?? []).compactMap({ json -> Post? in
+                    return Post(json: json)
+                })
+                
+                completion(.success(posts))
+            } catch {
+                print("Error during JSON serialization: \(error.localizedDescription)")
+                completion(.failure(error))
+            }
+        }).resume()
+    }
     
     func fetchPost(_ postId: Int, completion: @escaping (Result<Post, Error>) -> Void) {
         URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts/\(postId)")!, completionHandler: { data, response, error in
